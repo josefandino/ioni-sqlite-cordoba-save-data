@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- <ion-back-button></ion-back-button> -->
+      <ion-buttons slot="start">
+        <ion-back-button 
+              defaultHref="home"
+              mode="ios"
+              text="Atras"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>Editar información</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Código cátalogo </ion-label>
+    <ion-input [(ngModel)]="codeCatalogoVal"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Desc cátalogo </ion-label>
+    <ion-input [(ngModel)]="desCatalogolVal"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating"> desacronimoVal </ion-label>
+    <ion-input [(ngModel)]="desacronimoVal"></ion-input>
+  </ion-item>
+
+  <ion-button color="primary" expand="block" (click)="onUpdate()">
+    Actualizar
+  </ion-button>
+</ion-content>

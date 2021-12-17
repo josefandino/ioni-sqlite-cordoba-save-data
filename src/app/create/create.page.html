@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title> Parametros </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Create -->
+  <ion-item>
+    <ion-label position="floating">Código cátalogo </ion-label>
+    <ion-input [(ngModel)]="codeCatalogoVal"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating"> Desc cátalogo  </ion-label>
+    <ion-input [(ngModel)]="desCatalogolVal"></ion-input>
+  </ion-item>
+  
+  <br>
+
+  <ion-button color="primary" fill="outline" expand="block" (click)="createParametro()">
+    Agregar
+  </ion-button>
+  <br>
+
+  
+  <!-- Read -->
+  <ion-item *ngFor="let p of parmtrservice.PARMTRS">
+    <ion-label>
+      <p> Código cátalogo: <strong>{{ p.name }}</strong></p>
+      <p> Desc cátalogo: <strong>{{ p.email }}</strong></p>
+    </ion-label>
+
+    <div class="item-note" item-end>
+      <ion-icon color="primary" name="create" style="zoom:2" [routerLink]="['/edit/', p.user_id]"></ion-icon>
+      
+      <ion-icon color="danger" name="trash" style="zoom:2" (click)="remove(p.user_id)"></ion-icon>
+    </div>
+  </ion-item>
+  
+</ion-content>
