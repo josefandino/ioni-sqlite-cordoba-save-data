@@ -1,5 +1,5 @@
 # ionic-sqlite-cordova
-### git clone https://github.com/josefandino/ionic-sqlite.git
+### git clone https://github.com/josefandino/ioni-sqlite-cordoba-save-data.git
 ### mpn install
 
 # iOS
